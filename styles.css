@@ -49,7 +49,7 @@ body{
 #answer{
     margin-bottom: 0;
     margin-top: 2%;
-    
+    font-weight: 900;
 }
 .dummy{
     display: none;
@@ -202,8 +202,11 @@ line{
     }
     .btn{
         width: 32px;
-        height: 22.5px;
+        height: 27.5px;
         font-size: 1.08rem;
+    }
+    #answer{
+       color: gold;
     }
 }
 
