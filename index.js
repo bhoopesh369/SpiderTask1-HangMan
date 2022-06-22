@@ -7,7 +7,7 @@ var score = 0;
 var lScore = 0;
 var HighScoreHangMan = 0;
 // var inscore = true;
-HighScoreHangMan = window.localStorage.getItem("HighScoreHangMan");
+// HighScoreHangMan = window.localStorage.getItem("HighScoreHangMan");
 
 
 const api_url = "https://random-word-api.herokuapp.com/word";
