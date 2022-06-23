@@ -1,11 +1,12 @@
 var inGame = false;
-var answer="";
+var answer;
 var currentWord="";
 var palyerWord = [];
 var chances = 0;
 var score = 0;
 var lScore = 0;
 var HighScoreHangMan = 0;
+
 
 
 dictionary = [
@@ -20,22 +21,22 @@ dictionary = [
     "orange",
     "orion",
     "inductions",
-    "cycle"
+    "cycle",
 ];
 
-const api_url = "https://random-word-api.herokuapp.com/word";
+// const api_url = "https://random-word-api.herokuapp.com/word";
 
-var request = new XMLHttpRequest();
+// var request = new XMLHttpRequest();
 
-request.open('GET', api_url , true);
+// request.open('GET', api_url , true);
 
-request.onload = function () {
-    var data = JSON.parse(this.response);
-    console.log(data[0]);
-    answer = data[0];
-};
+// request.onload = function () {
+//     var data = JSON.parse(this.response);
+//     console.log(data[0]);
+//     answer = data[0];
+// };
 
-request.send();
+// request.send();
 
 
 
@@ -76,6 +77,8 @@ function tileEffects(currentKey){
 function displayWord(){
  
     // randomWord();   
+    let text = window.prompt("Player 2 : Enter Any Word","Word");
+    answer = text.toLowerCase();
     if(answer == ""){
           answer = dictionary[Math.floor(Math.random()*(dictionary.length))];
     }
@@ -185,7 +188,8 @@ for(var n=0;n<26;n++){
 
 
 function gameStart(){
-  
+
+    
     function tmp(){
        if(inGame == true){
             tileEffects(this.id);
